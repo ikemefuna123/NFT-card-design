@@ -231,6 +231,6 @@ main .profile p > a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    margin-right: 1rem;
   }
 }
