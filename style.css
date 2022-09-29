@@ -186,6 +186,29 @@ main .profile p > a:hover {
     border-radius: 0.625rem;
     width: 13.75rem;
   }
+  @media screen and (max-width: 320px) {
+  main .image-container .overlay {
+    display: none;
+    width: 280px;
+  }
+  main .image-container .card-image {
+    z-index: -1px;
+    display: block;
+    width: 280px;
+    height: auto;
+    transition: all 1s ease-in-out;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: 400ms ease-in-out;
+  }
+  main .image-container {
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+  }
+}
 }
 /*---------- Media Queries end ----------*/
 @media screen and (max-width: 320px) {
