@@ -1,0 +1,190 @@
+/*------- Google Fonts -------*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+
+/* Basic Styling Prerequisites */
+*::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+}
+/* Basic Styling Prerequisites */
+
+/*---------- Main Section Start ----------*/
+main {
+  background-color: hsl(216, 50%, 16%);
+  padding: 12px;
+  margin: 50px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 15px 1px 10px hsl(215, 50%, 9%);
+}
+main h3 > a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+main > p {
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(215, 32%, 27%);
+}
+main h3 > a:hover {
+  color: hsl(178, 100%, 50%);
+}
+/*---------- Main Section Start end ----------*/
+
+/*---------- Card Image And Overlay Section Start ----------*/
+main .image-container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .image-container svg {
+  z-index: -1;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+main .image-container:hover svg {
+  z-index: 1;
+  opacity: 1;
+  transform: rotate(360deg);
+}
+main .image-container .overlay {
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.4;
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  z-index: -1;
+  position: absolute;
+  transition: 500ms linear;
+}
+main .image-container:hover .overlay {
+  z-index: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+main .card-image {
+  max-width: 100%;
+  z-index: 1px;
+  display: block;
+  width: 300px;
+  height: auto;
+  transition: all 1s ease-in-out;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: 400ms ease-in-out;
+}
+main .card-image:hover {
+  opacity: 0.3;
+  transition: 500ms ease-in-out;
+}
+main .image-container .card-image {
+  transition: 500ms linear;
+}
+main .image-container:hover .card-image {
+  transform: scale(1.1);
+}
+
+/*---------- Card Image And Overlay Section Start ----------*/
+
+/* ----------Ethereum and Time Section Start----------*/
+main .price-tag {
+  display: flex;
+  justify-content: space-between;
+}
+main .price-tag .flex {
+  display: flex;
+  align-items: center;
+}
+main .price-tag svg {
+  margin-right: 10px;
+  transition: 0.8s ease-in-out;
+}
+main .price-tag svg:hover {
+  transform: rotate(360deg);
+}
+.clock {
+  color: hsl(215, 32%, 27%);
+}
+.ethereum {
+  color: hsl(178, 100%, 50%);
+}
+/* ----------Ethereum and Time Section end----------*/
+
+/*Horizontal Line start*/
+main .divider {
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+/*Horizontal Line end*/
+
+/*--------- Profile Info start ---------*/
+main .profile {
+  display: flex;
+  align-items: center;
+}
+
+main .profile img {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+main .profile p {
+  font-size: 18px;
+  color: hsl(215, 32%, 27%);
+}
+main .profile p > a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+main .profile p > a:hover {
+  color: hsl(178, 100%, 50%);
+}
+/*--------- Profile Info end ---------*/
+/*--------- footer links start ---------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution > span {
+  color: hsl(215, 32%, 27%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*--------- footer links end ---------*/
+/*---------- Media Queries start ----------*/
+@media screen and (max-width: 320px) {
+  main {
+    padding: 12px;
+    margin: 70px;
+    border-radius: 10px;
+    width: 260px;
+    height: 500px;
+    box-shadow: 0px 15px 1px 10px hsl(215, 50%, 9%);
+  }
+}
+@media screen and (max-width: 280px) {
+  main {
+    padding: 12px;
+    margin: 70px;
+    border-radius: 10px;
+    width: 220px;
+  }
+}
+/*---------- Media Queries end ----------*/
